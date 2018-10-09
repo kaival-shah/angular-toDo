@@ -1,0 +1,19 @@
+
+<body class="text-center">
+	<div style="margin: 20% auto; width: 50%;">
+		<form class="form-signin" ng-submit="login(email, password)">
+			<img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt=""
+				width="36" height="36" align="center">
+			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+			<label for="inputEmail" class="sr-only">Email address</label> <input
+				type="text" ng-model="email" id="inputEmail" class="form-control"
+				placeholder="Email address" required autofocus> <label
+				for="inputPassword" class="sr-only">Password</label> <input
+				type="password" ng-model="password" id="inputPassword"
+				class="form-control" placeholder="Password" required>
+			<button class="btn btn-lg btn-primary btn-block" type="submit"
+				ng-click="login()">Sign in</button>
+			<p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+		</form>
+	</div>
+</body>

@@ -1,0 +1,46 @@
+<div class="container mt-5">
+	<div class="col-md-8 float-left">
+		<input class="form-control" type="text" ng-model="todo.title" />
+	</div>
+
+	<div>
+		<button class="btn btn-primary" ng-click="saveTodo($index)" type="submit">Save
+			Todo</button>
+	</div>
+
+
+	<ul class="list-group" style="margin-top: 5%;">
+
+		<li class="list-group-item" ng-repeat="todo in todos">
+			<div class="form-check float-left">
+				<input class="form-check-input" ng-model="todo.selected"
+					type="checkbox" value=""> <label class="form-check-label">
+					{{todo.title}} </label>
+			</div> <!-- <span class="glyphicon glyphicon-pencil"></span> -->
+
+			<div class="float-right">
+
+				<button type="button" class="btn btn-default btn-sm"
+					ng-click="editToDo($index)">
+					<span style="color: lime;">&#x270f;</span>
+				</button>
+
+				<button type="button" class="close,btn btn-default btn-sm"
+					aria-label="Close" style="color: red;"
+					ng-click="deleteTodo($index)">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+
+		</li>
+
+	</ul>
+
+	<div>
+
+		<button class="btn btn-primary" ng-click="deleteMultiple()"
+			ng-if="todos.length > 0" style="margin-top: 2%; margin-left: 40%;">Delete
+			ToDos</button>
+	</div>
+</div>
